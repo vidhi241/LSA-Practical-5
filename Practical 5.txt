@@ -1,0 +1,31 @@
+PRACTICAL NO. 5
+
+Aim:Install Samba to share folders or files between windows and Linux
+
+Theory:What is Samba?
+Samba is the standard Windows interoperability suite of programs for Linux and Uni
+Samba is an important component to seamlessly integrate Linux/Unix Servers and Desktops into Active Directory environments. It can function both as a domain controller or as a regular domain member.
+Samba is a software package that gives network administrators flexibility and freedom in terms of setup, configuration, and choice of systems and equipment. Because of all that it offers, Samba has grown in popularity, and continues to do so, every year since its release in 1992.
+Configuring Samba:
+Samba is a very mature and complex package, so its configuration file can be long and complicated. You will have to trust that your distribution supplied you with a reasonably sound default configuration and focus on changing just a few lines in smb.conf to make sure they are appropriate for the purposes of a home network. If you want to know more about any line, consult man smb.conf.
+Sharing directories and printers:
+It’s time to move beyond [global] and configure specific shared resources. Begin with the [homes] section. By default, your distribution may have this section configured to allow users to access their home directory on the machine running the Samba server.
+
+Code:
+Step 1: Install Samba
+sudo apt-get -y insyall samba
+cd
+ls
+
+Step 2: Configure Samba
+mkdir -p/home/share
+cd home
+ls
+sudo chmod777/home/share
+
+Step 3:sudo nano/etc/samba/smb.conf
+
+Step 4: write block at the end of the smb.config file
+
+Step 5: now restart your samba:
+systemctl restart smbd 
